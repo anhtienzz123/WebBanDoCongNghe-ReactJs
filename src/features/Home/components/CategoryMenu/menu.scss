@@ -1,4 +1,12 @@
 .menu{
-    border: 1px solid white;
-    border-radius: 5px;
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+
+    .sub-category{
+        position: absolute;
+        background: white;
+        left: 101%;
+        top: 0px;
+        z-index: 1;
+    }
 }

@@ -32,7 +32,7 @@ function Header(props) {
         <Menu.Item key="app" icon={<AppstoreOutlined />}>
           <Link to="/cart">Xem giỏ hàng</Link>
         </Menu.Item>
-        <Menu.Item key="app" icon={<AppstoreOutlined />}>
+        <Menu.Item key="gop" icon={<AppstoreOutlined />}>
           <Text>Xem giỏ hàng</Text>
         </Menu.Item>
       </Menu>

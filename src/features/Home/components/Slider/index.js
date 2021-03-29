@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { Carousel } from "antd";
+import { Carousel, Image } from "antd";
 
 const contentStyle = {
   color: "#fff",
@@ -10,24 +10,29 @@ const contentStyle = {
   background: "#364d79",
 };
 
-Slider.propTypes = {};
+Slider.propTypes = {
+  sliders: PropTypes.array,
+};
+
+Slider.defaultProps = {
+  sliders: [],
+};
 
 function Slider(props) {
+  const { sliders } = props;
+
   return (
     <div className="slider">
       <Carousel autoplay>
-        <div>
-          <h3 style={contentStyle}>1</h3>
-        </div>
-        <div>
-          <h3 style={contentStyle}>2</h3>
-        </div>
-        <div>
-          <h3 style={contentStyle}>3</h3>
-        </div>
-        <div>
-          <h3 style={contentStyle}>4</h3>
-        </div>
+        {sliders.map((s, index) => {
+          const { id, title, image } = s;
+
+          return (
+            <div>
+              <img style={{ width: "100%" }} src={image} />
+            </div>
+          );
+        })}
       </Carousel>
     </div>
   );

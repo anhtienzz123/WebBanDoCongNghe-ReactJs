@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import NotFound from "./components/NotFound";
 import Home from "./features/Home";
 import Cart from "features/Cart";
+import ProductCategory from "features/ProductCategory";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/cart" component={Cart} />
-
+            <Route path="/category" component={ProductCategory} />
             <Route component={NotFound} />
           </Switch>
         </div>
